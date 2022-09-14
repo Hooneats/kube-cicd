@@ -1,5 +1,5 @@
 FROM openjdk:11
-ARG JAR_FILE_PATH=./build/libs/*.jar
+ARG JAR_FILE_PATH=./*.jar
 ADD ${JAR_FILE_PATH} kube-app.jar
 RUN chmod +x kube-app.jar
 
