@@ -5,7 +5,7 @@
       docker_login:
         email: "hooneats@naver.com"
         username: "hooneats"
-        password: "rlaaudgns2@"
+        password: "dckr_pat_tO7kJcrnniMXKNOccPQzoI1R_w4"
 
     - name: if exists image then remove
       command: docker rmi kube-project
