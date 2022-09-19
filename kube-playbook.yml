@@ -1,0 +1,11 @@
+- hosts: all
+
+  tasks:
+    - name: if exists image then remove
+      command: docker rmi kube-project
+      ignore_errors: yes
+
+    - name: build docker image, name kube-project
+      command: docker build -t kube-project .
+      args:
+        chdir: /root
