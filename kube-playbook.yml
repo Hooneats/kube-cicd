@@ -16,5 +16,5 @@
       args:
         chdir: /root
 
-    - namd: push docker image
+    - name: push docker image
       command: docker push hooneats/kube
