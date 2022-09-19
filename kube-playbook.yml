@@ -1,6 +1,12 @@
 - hosts: all
 
   tasks:
+    - name: log into docker hub registry
+      docker_login:
+        email: "hooneats@naver.com"
+        username: "hooneats"
+        password: "rlaaudgns2@"
+
     - name: if exists image then remove
       command: docker rmi kube-project
       ignore_errors: yes
@@ -9,3 +15,6 @@
       command: docker build -t kube-project .
       args:
         chdir: /root
+
+    - namd: push docker image
+      command: docker push hooneats/kube
