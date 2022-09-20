@@ -4,6 +4,7 @@
   tasks:
     - name: Delete previous deployment
       command: kubectl delete deployment.apps/kube-mini-deployment
+      ignore_errors: yes
 
     - name: Create deployment
       command: kubectl apply -f kube-mini-deployment.yml
