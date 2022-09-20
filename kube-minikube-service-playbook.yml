@@ -1,0 +1,6 @@
+- name: Create service
+  hosts: all
+
+  tasks:
+    - name: create service tasks
+      command: kubectl apply -f kube-mini-service.yml

@@ -1,0 +1,9 @@
+- name: Create pods from deployment
+  hosts: all
+
+  tasks:
+    - name: Delete previous deployment
+      command: kubectl delete deployment.apps/kube-mini-deployment
+
+    - name: Create deployment
+      command: kubectl apply -f kube-mini-deployment.yml
